@@ -115,7 +115,7 @@ defmodule Ecto.Repo do
             quote do: unquote(mod).unquote(fun)(unquote(acc), unquote_splicing(args))
         end)
 
-      IO.inspect loggers
+      IO.inspect unquote(loggers)
 
       def __adapter__ do
         @adapter
